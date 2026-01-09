@@ -6,9 +6,9 @@ def train():
 
     model.train(
         data = "pcb-defect-dataset/data.yaml",
-        epochs = 20,
-        imgsz = 640,
-        batch = 8
+        epochs = 5,
+        imgsz = 416,
+        batch = 4
     )
 
 if __name__ == "__main__":
