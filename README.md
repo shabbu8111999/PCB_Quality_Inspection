@@ -1,4 +1,4 @@
-# 🧾 Assignment 2: Automated Quality Inspection System for Manufacturing
+# 🧾 Automated Quality Inspection System for Manufacturing
 
 ## 📌 Project Title
 PCB Defect Detection using Computer Vision
