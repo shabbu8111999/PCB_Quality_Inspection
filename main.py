@@ -1,6 +1,3 @@
-def main():
-    print("Hello from pcb-quality-inspection!")
+from src.detect_defects import detect_defects
 
-
-if __name__ == "__main__":
-    main()
+detect_defects("samples/images/defective_sample.jpg")

@@ -1,0 +1,41 @@
+from ultralytics import YOLO
+import cv2
+
+def detect_defects(image_path):
+    model = YOLO("runs/detect/train/weights/best.pt")
+    results = model(image_path)
+
+    img = cv2.imread(image_path)
+
+    for r in results:
+        for box in r.boxes:
+            x1, y1, x2, y2 = map(int, box.xyxy[0])
+            conf = float(box.conf[0])
+            cls = int(box.cls[0])
+            name = model.names[cls]
+
+            # center coordinates
+            cx = int((x1 + x2) / 2)
+            cy = int((y1 + y2) / 2)
+
+            # simple severity logic
+            area = (x2 - x1) * (y2 - y1)
+            severity = "High" if area > 5000 else "Low"
+
+            print({
+                "defect": name,
+                "confidence": round(conf, 2),
+                "center": (cx, cy),
+                "severity": severity
+            })
+
+            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(img, name, (x1, y1 - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+    cv2.imshow("Defect Detection", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    detect_defects("samples/images/defective_sample.jpg")

@@ -219,3 +219,9 @@ train/images/
 *.tar.gz
 *.jpg
 *.png
+
+# Allow samples folder
+!samples/
+!samples/images/defective_sample.jpg
+!samples/images/non-defective_sample.jpg
+!samples/annotations/
