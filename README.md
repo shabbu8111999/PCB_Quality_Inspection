@@ -6,9 +6,9 @@ PCB Defect Detection using Computer Vision
 ---
 
 ## 📖 Background
-In manufacturing industries, products must be inspected for defects before packaging.  
-Manual inspection is slow and can lead to human errors.  
-This project demonstrates an automated visual inspection system using computer vision to detect defects on Printed Circuit Boards (PCBs).
+- In manufacturing industries, products must be inspected for defects before packaging.  
+- Manual inspection is slow and can lead to human errors.  
+- This project demonstrates an automated visual inspection system using computer vision to detect defects on Printed Circuit Boards (PCBs).
 
 ---
 
