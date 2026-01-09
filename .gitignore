@@ -205,3 +205,17 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Ignore datasets
+pcb-defect-dataset/
+data/
+datasets/
+test/images/
+test/labels/
+train/images/
+*.zip
+*.tar
+*.tar.gz
+*.jpg
+*.png
