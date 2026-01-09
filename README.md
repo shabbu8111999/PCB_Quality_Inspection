@@ -50,29 +50,26 @@ This satisfies the requirement of using at least three different defect types.
 
 pcb_quality_inspection/
 │
-
-├── pcb-defect-dataset/        # Dataset (not uploaded to GitHub)
-│   └── data.yaml
+├── pcb-defect-dataset/ # Dataset (not uploaded to GitHub)
+│ └── data.yaml
 │
-
-├── samples/                  # Sample images for submission
-│  
-├── images/
-│   │   ├── defective_sample.jpg
-│   │   └── non_defective_sample.jpg
-│   │
-│   └── annotations/
-│       └── defective_sample.txt
+├── samples/ # Sample images for submission
+│ ├── images/
+│ │ ├── defective_sample.jpg
+│ │ └── non_defective_sample.jpg
+│ │
+│ └── annotations/
+│ └── defective_sample.txt
 │
 ├── src/
-│   ├── train_model.py
-│   ├── detect_defects.py
-│   └── utils.py
+│ ├── train_model.py # Model training script
+│ ├── detect_defects.py # Defect detection script
+│ └── utils.py # Helper functions
 │
-├── main.py
-├── requirements.txt
-├── README.md
-└── .gitignore
+├── main.py # Project entry point
+├── requirements.txt # Dependencies
+├── README.md # Documentation
+└── .gitignore # Git ignore file
 
 ---
 
